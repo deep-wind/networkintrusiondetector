@@ -29,9 +29,9 @@ valid_service = list(np.unique(mapping_df["Service"].values))
 valid_flag = ["SF","S0","REJ","RSTR", "SH","RSTO", "S1","RSTOS0", "S3","S2","OTH" ]
 
 
-Protocol_type = st.selectbox('Select protocol type', [""] + valid_protocol_types,index=0)
-Service = st.selectbox('Select service', [""] + valid_service,index=0)
-Flag = st.selectbox('Select flag', [""] + valid_flag,index=0)
+Protocol_type = st.selectbox('Select protocol type', valid_protocol_types)
+Service = st.selectbox('Select service', valid_service)
+Flag = st.selectbox('Select flag',valid_flag)
 Src_bytes=st.number_input('Enter source bytes',min_value=0, max_value=7665876, value=0, step=1)
 Logged_in = st.radio("Logged In status",(0,1))
 Count=st.number_input('Enter Number of connections',min_value=0, max_value=600, value=0, step=1)
