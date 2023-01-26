@@ -29,7 +29,7 @@ valid_service = list(np.unique(mapping_df["Service"].values))
 valid_flag = ["SF","S0","REJ","RSTR", "SH","RSTO", "S1","RSTOS0", "S3","S2","OTH" ]
 
 
-Protocol_type = st.selectbox('Select protocol type', [""] + valid_protocol_types)
+Protocol_type = st.selectbox('Select protocol type', [valid_protocol_types[0]] + valid_protocol_types)
 Service = st.selectbox('Select service', [""] + valid_service)
 Flag = st.selectbox('Select flag', [""] + valid_flag)
 Src_bytes=st.number_input('Enter source bytes',min_value=0, max_value=7665876, value=0, step=1)
