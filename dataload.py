@@ -99,7 +99,7 @@ result=['apache2','back', 'buffer_overflow', 'ftp_write', 'guess_passwd',
  'udpstorm', 'warezclient', 'warezmaster', 'worm', 'xlock', 'xsnoop', 'xterm']
 
 
-model =tensorflow.keras.models.load_model('1dmodell.h5')
+model =tensorflow.keras.models.load_model('1dmodel.h5')
 if(st.button("predict")):
     test_data = df1.reshape(-1,1,21)
     o=model.predict(test_data, batch_size=1)
