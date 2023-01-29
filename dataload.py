@@ -78,7 +78,7 @@ Flag= Flag_trans[0]
 
 
 lst=[int(Protocol_type), int(Service) ,int(Flag), Src_bytes, Logged_in, Count,
- Srv_count, Serror_rate ,Srv_serror_rate ,Same_srv_rate,
+ Srv_count, Serror_rate ,Srv_serror_rate ,Rerror_rate,Same_srv_rate,
  Diff_srv_rate, Dst_host_count,Dst_host_srv_count,
  Dst_host_same_srv_rate, Dst_host_diff_srv_rate,
  Dst_host_same_src_port_rate, Dst_host_srv_diff_host_rate,
