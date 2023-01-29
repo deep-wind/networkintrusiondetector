@@ -38,7 +38,7 @@ Count=st.number_input('Enter Number of connections',min_value=0, max_value=600, 
 Srv_count=st.number_input('Number of connections to the same service',min_value=0, max_value=600, value=0, step=1)
 Serror_rate=st.number_input('Serror_rate',min_value=0.0, max_value=1.0, value=0.0, step=0.1)
 Srv_serror_rate=st.number_input('Srv_serror_rate',min_value=0.0, max_value=1.0, value=0.0, step=0.1)
-#Rerror_rate=st.number_input('Rerror_rate',min_value=0.0, max_value=1.0, value=0.0, step=0.1)
+Rerror_rate=st.number_input('Rerror_rate',min_value=0.0, max_value=1.0, value=0.0, step=0.1)
 Same_srv_rate=st.number_input('Same_srv_rate',min_value=0.0, max_value=1.0, value=0.0, step=0.1)
 Diff_srv_rate=st.number_input('Diff_srv_rate',min_value=0.0, max_value=1.0, value=0.0, step=0.1)
 Dst_host_count=st.number_input('Dst_host_count',min_value=0.0, max_value=1.0, value=0.0, step=0.1)
@@ -99,9 +99,9 @@ result=['apache2','back', 'buffer_overflow', 'ftp_write', 'guess_passwd',
  'udpstorm', 'warezclient', 'warezmaster', 'worm', 'xlock', 'xsnoop', 'xterm']
 
 
-model =tensorflow.keras.models.load_model('modelnew.h5')
+model =tensorflow.keras.models.load_model('1dmodell.h5')
 if(st.button("predict")):
-    test_data = df1.reshape(1,-1)
+    test_data = df1.reshape(-1,1,21)
     o=model.predict(test_data, batch_size=1)
     #st.write(o)
     #st.write(len(o[0]))
